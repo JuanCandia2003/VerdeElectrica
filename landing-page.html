@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerdeElectrica — Landing</title>
+  <link rel="stylesheet" href="landing-styles.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="landing-page.html" class="brand">Verde<span class="accent">Electrica</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home-page.html">Home</a>
+        <a href="store-page.html">Tienda</a>
+        <a href="landing-page.html">Landing</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Redescubre tu Ciudad. Muévete sin Límites.</h1>
+          <p class="lead">Experimenta la libertad de una movilidad silenciosa, económica y respetuosa con el medio ambiente. Tu viaje diario está a punto de cambiar para siempre.</p>
+          <div class="hero-ctas">
+            <a href="store-page.html" class="btn btn-primary">Explora Modelos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modelos destacados -->
+    <section class="showcase container">
+      <h2>Nuestros Modelos Estrella</h2>
+      <div class="showcase-grid">
+        <article class="mini-card">
+          <img src="https://i.ibb.co/Y4yY7fQ4/Whats-App-Image-2025-10-07-at-10-15-41-AM.jpg" alt="Moto Urban Glide 300"/>
+          <h3>Urban Glide 300</h3>
+          <p class="muted">El equilibrio perfecto entre potencia y estilo.</p>
+          <div class="price">Bs 1.199</div>
+          <button class="btn btn-card" onclick="window.location.href='store-page.html'">Ver más</button>
+        </article>
+        <article class="mini-card">
+          <img src="https://i.ibb.co/gZKXdHMc/Whats-App-Image-2025-10-08-at-2-53-02-PM.jpg" alt="Moto EcoRider S"/>
+          <h3>EcoRider S</h3>
+          <p class="muted">Ligera, versátil y lista para la aventura urbana.</p>
+          <div class="price">Bs 899</div>
+          <button class="btn btn-card" onclick="window.location.href='store-page.html'">Ver más</button>
+        </article>
+        <article class="mini-card">
+          <img src="https://i.ibb.co/TDFdP9G5/Whats-App-Image-2025-10-08-at-2-53-08-PM.jpg" alt="Moto MotoVolt M1"/>
+          <h3>MotoVolt M1</h3>
+          <p class="muted">Tecnología y rendimiento que te llevarán más lejos.</p>
+          <div class="price">Bs 1.499</div>
+          <button class="btn btn-card" onclick="window.location.href='store-page.html'">Ver más</button>
+        </article>
+      </div>
+    </section>    
+
+    <!-- Rating Section -->
+    <section id="rating-section" class="rating-section container">
+      <h2>Calificaciones de Clientes</h2>
+      <div class="rating-body">
+        <!-- Overall Rating Summary -->
+        <div class="rating-summary">
+          <div class="average-rating" id="average-rating">0.0</div>
+          <div class="summary-stars" id="summary-stars-display"></div>
+          <div class="total-reviews" id="total-reviews">Basado en 0 reseñas</div>
+        </div>
+        <!-- Rating Breakdown -->
+        <div class="rating-breakdown">
+          <div class="rating-bar-container">
+            <span class="star-label">1 ★</span>
+            <div class="progress-bar"><div id="bar-5" class="progress"></div></div>
+          </div>
+          <div class="rating-bar-container">
+            <span class="star-label">2 ★</span>
+            <div class="progress-bar"><div id="bar-4" class="progress"></div></div>
+          </div>
+          <div class="rating-bar-container">
+            <span class="star-label">3 ★</span>
+            <div class="progress-bar"><div id="bar-3" class="progress"></div></div>
+          </div>
+          <div class="rating-bar-container">
+            <span class="star-label">4 ★</span>
+            <div class="progress-bar"><div id="bar-2" class="progress"></div></div>
+          </div>
+          <div class="rating-bar-container">
+            <span class="star-label">5 ★</span>
+            <div class="progress-bar"><div id="bar-1" class="progress"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- New Rating Form -->
+      <div class="rating-form-container">
+        <h3>¡Valora nuestros productos!</h3>
+        <form id="rating-form">
+          <div class="form-group animated-star-rating">
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 estrellas">★</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 estrellas">★</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 estrellas">★</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 estrellas">★</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 estrella">★</label>
+          </div>
+          <button type="submit" class="btn">Enviar Calificación</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta container">
+      <h3>¿Listo para sentir la diferencia?</h3>
+      <p>La mejor forma de convencerte es probándola. Agenda tu prueba de manejo gratuita hoy mismo.</p>
+      <button id="cta-open-chatbot" class="btn">Agendar mi prueba ahora</button>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>MotoEco</h4>
+        <p>Cochabamba, Bolivia<br/>Tel: +591 7 1234567<br/>mail@motoeco.bo</p>
+      </div>
+      <div>
+        <h5>Horario</h5>
+        <p>Lun - Vie: 9:00 - 18:00<br/>Sáb: 9:00 - 13:00</p>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <p><a href="https://www.instagram.com/verde.electrica/">Instagram</a> • <a href="https://www.facebook.com/profile.php?id=61581521435775">Facebook</a> • <a href="https://wa.me/c/59163871286">WhatsApp</a></p>      </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 MotoEco </p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+      <button class="chatbot-toggle" id="chatbotToggle">
+          💬
+      </button>
+      <div class="chatbot" id="chatbot">
+          <div class="chat-header">
+              <h3>Asistente de Citas</h3>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+              <!-- Messages will be appended here -->
+          </div>
+          <div class="chat-input">
+              <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+              <button id="sendButton">➤</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="main.js"></script>
+  <script src="chatbot.js"></script>
+  <script src="comments.js"></script>
+</body>
+</html>

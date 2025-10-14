@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerdeElectrica — Tienda</title>
+  <link rel="stylesheet" href="store-styles.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+  <!-- Header -->
+<header class="site-header">
+    <div class="container header-inner">
+      <a href="landing-page.html" class="brand">Verde<span class="accent">Electrica</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home-page.html">Home</a>
+        <a href="store-page.html">Tienda</a>
+        <a href="landing-page.html">Landing</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Catálogo de Productos</h1>
+    </div>
+  </section>
+
+  <!-- Filtros -->
+  <section class="filters container">
+    <h2>Filtrar por</h2>
+    <form id="filterForm">
+      <label for="priceFilter">
+        Precio:
+        <select id="priceFilter" name="price">
+          <option value="all">Todos</option>
+          <option value="0-1000">Menos de Bs 1000</option>
+          <option value="1000-1500">Bs 1000 - Bs 1500</option>
+          <option value="1500-9999">Más de Bs 1500</option>
+        </select>
+      </label>
+      <label for="autonomyFilter">
+        Autonomía:
+        <select id="autonomyFilter" name="autonomy">
+          <option value="all">Todas</option>
+          <option value="50-80">50-80 km</option>
+          <option value="80-120">80-120 km</option>
+          <option value="120-999">+120 km</option>
+        </select>
+      </label>
+    </form>
+  </section>
+
+  <!-- Catálogo -->
+  <main class="store container">
+    <div class="product-grid" id="productGrid">
+      <!-- Los productos se insertarán aquí mediante JavaScript -->
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>MotoEco</h4>
+        <p>Cochabamba, Bolivia<br/>Tel: +591 7 1234567<br/>mail@motoeco.bo</p>
+      </div>
+      <div>
+        <h5>Enlaces</h5>
+        <a href="landing-page.html">Landing</a><br/>
+        <a href="home-page.html">Nosotros</a>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <p><a href="https://www.instagram.com/verde.electrica/">Instagram</a> • <a href="https://www.facebook.com/profile.php?id=61581521435775">Facebook</a> • <a href="https://wa.me/c/59163871286">WhatsApp</a></p>      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 MotoEco</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+      <button class="chatbot-toggle" id="chatbotToggle">
+          💬
+      </button>
+      <div class="chatbot" id="chatbot">
+          <div class="chat-header">
+              <h3>Asistente de Citas</h3>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+              <!-- Messages will be appended here -->
+          </div>
+          <div class="chat-input">
+              <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+              <button id="sendButton">➤</button>
+          </div>
+      </div>
+  </div>
+
+  <script src="main.js"></script>
+  <script src="store-script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>

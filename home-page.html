@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VerdeElectrica — Home</title>
+  <link rel="stylesheet" href="home-styles.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="landing-page.html" class="brand">Verde<span class="accent">Electrica</span></a>
+      <nav class="main-nav" id="mainNav">
+        <a href="home-page.html">Home</a>
+        <a href="store-page.html">Tienda</a>
+        <a href="landing-page.html">Landing</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero institucional -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 id="hero-tittle">Sobre VerdeElectrica</h1>
+      <p class="lead">Somos un proveedor de movilidad eléctrica en Bolivia, ofreciendo bicicletas, scooters y
+trimotos con baterías de litio, de alta calidad y a precios accesibles. Nuestra misión es
+brindar transporte confiable y económico, ayudando a los usuarios a ahorrar combustible.
+Actualmente, enfrentamos el reto de aumentar nuestra presencia en redes sociales para
+llegar a más clientes y consolidar nuestra marca.</p>
+    </div>
+  </section>
+
+  <!-- Misión / Visión / Valores -->
+  <section class="info container">
+    <div class="grid-3">
+      <article class="card">
+        <h2>Misión</h2>
+        <p>Ofrecer movilidad eléctrica confiable y accesible en Bolivia, ayudando a nuestros usuarios a ahorrar combustible y moverse de manera sostenible.
+</p>
+      </article>
+      <article class="card">
+        <h2>Visión</h2>
+        <p>Ser la marca líder en transporte eléctrico en Bolivia, reconocida por su calidad, innovación y precio justo.</p>
+      </article>
+      <article class="card">
+        <h2>Valores</h2>
+        <ul>
+          <li>🌱 Sostenibilidad</li>
+          <li>🤝 Cercania</li>
+          <li>🚀 Innovación</li>
+          <li>⚡ Innovación</li>
+          <li>🔝 Calidad</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Carrusel de Motos -->
+  <section class="team container">
+    <h1>Bicicletas Eléctricas</h1>
+    <div class="carousel">
+      <button class="carousel-btn prev" id="prevBtn" aria-label="Diapositiva anterior">‹</button>
+      <div class="carousel-track" id="carouselTrack">
+        <div class="carousel-item">
+          <img src="https://i.ibb.co/Y4yY7fQ4/Whats-App-Image-2025-10-07-at-10-15-41-AM.jpg" alt="Moto eléctrica modelo 1">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.ibb.co/gZKXdHMc/Whats-App-Image-2025-10-08-at-2-53-02-PM.jpg" alt="Moto eléctrica modelo 2">
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.ibb.co/TDFdP9G5/Whats-App-Image-2025-10-08-at-2-53-08-PM.jpg" alt="Scooter eléctrico modelo 3">
+        </div>
+      </div>
+      <button class="carousel-btn next" id="nextBtn" aria-label="Siguiente diapositiva">›</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>MotoEco</h4>
+        <p>Cochabamba, Bolivia<br/>Tel: +591 7 1234567<br/>mail@motoeco.bo</p>
+      </div>
+      <div>
+        <h5>Horario</h5>
+        <p>Lun - Vie: 9:00 - 18:00<br/>Sáb: 9:00 - 13:00</p>
+      </div>
+      <div>
+        <h5>Síguenos</h5>
+        <p><a href="https://www.instagram.com/verde.electrica/">Instagram</a> • <a href="https://www.facebook.com/profile.php?id=61581521435775">Facebook</a> • <a href="https://wa.me/c/59163871286">WhatsApp</a></p>      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© 2025 MotoEco</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <div class="chatbot-container">
+      <button class="chatbot-toggle" id="chatbotToggle">
+          💬
+      </button>
+      <div class="chatbot" id="chatbot">
+          <div class="chat-header">
+              <h3>Asistente de Citas</h3>
+          </div>
+          <div class="chat-messages" id="chatMessages">
+              <!-- Messages will be appended here -->
+          </div>
+          <div class="chat-input">
+              <input type="text" id="userInput" placeholder="Escribe tu mensaje...">
+              <button id="sendButton">➤</button>
+          </div>
+      </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="home-script.js"></script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
