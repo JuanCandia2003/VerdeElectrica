@@ -6,12 +6,28 @@ document.addEventListener('DOMContentLoaded', function () {
   const mainNav = document.getElementById('mainNav');
 
   if (navToggle && mainNav) {
-    navToggle.addEventListener('click', function () {
+    const header = document.querySelector('.site-header');
+    function updateNavTop() {
+      const headerHeight = header ? header.offsetHeight : 56;
+      mainNav.style.top = headerHeight + 'px';
+      // when closed ensure max-height matches calc
+    }
+
+    navToggle.addEventListener('click', function (e) {
+      e.stopPropagation();
+      updateNavTop();
       mainNav.classList.toggle('open');
-      // Update aria-expanded for accessibility
       const expanded = mainNav.classList.contains('open');
       navToggle.setAttribute('aria-expanded', expanded);
+      // prevent body scroll when open
+      if (expanded) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
     });
+    // update on resize
+    window.addEventListener('resize', updateNavTop);
   }
 
   // Close nav when clicking outside on small screens
@@ -22,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if (!isClickInside) {
         mainNav.classList.remove('open');
         navToggle.setAttribute('aria-expanded', false);
+        document.body.style.overflow = '';
       }
     }
   });

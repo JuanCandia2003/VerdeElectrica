@@ -111,7 +111,28 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .main-nav { position: absolute; top: 60px; right: 1rem; background: var(--surface); flex-direction: column; padding: 1rem; display: none; }
-  .main-nav.open { display: flex; }
-  .nav-toggle { display: block; }
+  /* Mobile nav: slide-down panel under the header */
+  .main-nav {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    max-height: 0;
+    overflow: hidden;
+    background: var(--surface);
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: stretch;
+    gap: 0.25rem;
+    transition: max-height 300ms ease-in-out, box-shadow 300ms ease-in-out;
+    box-shadow: none;
+    z-index: 30;
+  }
+  .main-nav a { display: block; width: 100%; padding: 0.9rem 1rem; }
+  .main-nav.open {
+    max-height: calc(100vh - 56px);
+    box-shadow: 0 6px 30px rgba(0,0,0,0.12);
+  }
+  .nav-toggle { display: block; z-index: 40; }
 }
